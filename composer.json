@@ -1,19 +1,19 @@
 {
-  "name": "deka6pb/yii2-geocoder",
+  "name": "ghabes/yii2-geocoder",
   "description": "Yii 2 Geocoder with Yandex Geocoder API and Google Maps API",
-  "keywords": [
-    "yii2",
-    "yii2-geocoder",
-    "geocoder",
-    "deka6pb"
-  ],
-  "homepahe": "https://github.com/deka6pb/yii2-geocoder",
+  "keywords": ["yii2", "yii2-geocoder", "geocoder", "deka6pb"],
+  "homepahe": "https://github.com/ghabes/yii2-geocoder",
   "type": "yii2-extension",
   "license": "MIT",
   "authors": [
     {
       "name": "Mikhail Maklashov",
       "email": "deka6pb@gmail.com"
+    },
+    {
+      "name": "Ghabes",
+      "homepahe": "https://github.com/ghabes",
+      "role": "Developer"
     }
   ],
   "minimum-stability": "dev",
@@ -27,7 +27,7 @@
   },
   "autoload": {
     "psr-4": {
-      "deka6pb\\geocoder\\": ""
+      "ghabes\\geocoder\\": ""
     }
   }
 }
