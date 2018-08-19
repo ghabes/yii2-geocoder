@@ -1,12 +1,11 @@
 <?php
 
-namespace deka6pb\geocoder\coders;
+namespace ghabes\geocoder\coders;
 
-use deka6pb\geocoder\abstraction\CoderAbstract;
-use deka6pb\geocoder\objects\YandexObject;
+use ghabes\geocoder\abstraction\CoderAbstract;
+use ghabes\geocoder\objects\YandexObject;
 use Curl\Curl;
 use yii\helpers\ArrayHelper;
-use yii\helpers\VarDumper;
 
 class YandexCoder extends CoderAbstract
 {

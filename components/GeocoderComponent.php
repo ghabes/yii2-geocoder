@@ -1,10 +1,10 @@
 <?php
 
-namespace deka6pb\geocoder\components;
+namespace ghabes\geocoder\components;
 
-use deka6pb\geocoder\abstraction\CoderInterface;
-use deka6pb\geocoder\Geocoder;
-use deka6pb\geocoder\Point;
+use ghabes\geocoder\abstraction\CoderInterface;
+use ghabes\geocoder\Geocoder;
+use ghabes\geocoder\Point;
 use yii\base\Component;
 
 /**
@@ -20,7 +20,7 @@ class GeocoderComponent extends Component
 
     /**
      * @param null $language
-     * @return \deka6pb\geocoder\coders\GoogleCoder|\deka6pb\geocoder\coders\YandexCoder
+     * @return \ghabes\geocoder\coders\GoogleCoder|\ghabes\geocoder\coders\YandexCoder
      * @throws \yii\base\Exception
      */
     public function init($language = null)

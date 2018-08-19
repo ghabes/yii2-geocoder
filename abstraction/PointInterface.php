@@ -1,12 +1,12 @@
 <?php
 
-namespace deka6pb\geocoder\abstraction;
+namespace ghabes\geocoder\abstraction;
 
-use deka6pb\geocoder\Point;
+use ghabes\geocoder\Point;
 
 /**
  * Interface PointInterface
- * @package deka6pb\yii2-geocoder
+ * @package ghabes\yii2-geocoder
  */
 interface PointInterface
 {

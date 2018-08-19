@@ -1,7 +1,7 @@
 <?php
 
 
-namespace deka6pb\geocoder;
+namespace ghabes\geocoder;
 
 use Location\Coordinate;
 use Location\Distance\DistanceInterface;
@@ -9,7 +9,7 @@ use Location\Distance\Vincenty;
 
 /**
  * Class Point
- * @package deka6pb\yii2-geocoder
+ * @package ghabes\yii2-geocoder
  *
  * @property double $latitude
  * @property double $longitude

@@ -1,11 +1,10 @@
 <?php
 
-namespace deka6pb\geocoder\objects;
+namespace ghabes\geocoder\objects;
 
-use deka6pb\geocoder\abstraction\ObjectAbstract;
-use deka6pb\geocoder\Point;
+use ghabes\geocoder\abstraction\ObjectAbstract;
+use ghabes\geocoder\Point;
 use yii\helpers\ArrayHelper;
-use yii\helpers\VarDumper;
 
 class GoogleObject extends ObjectAbstract
 {

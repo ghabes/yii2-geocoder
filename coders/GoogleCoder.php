@@ -1,12 +1,11 @@
 <?php
 
-namespace deka6pb\geocoder\coders;
+namespace ghabes\geocoder\coders;
 
-use deka6pb\geocoder\abstraction\CoderAbstract;
-use deka6pb\geocoder\objects\GoogleObject;
+use ghabes\geocoder\abstraction\CoderAbstract;
+use ghabes\geocoder\objects\GoogleObject;
 use Curl\Curl;
 use yii\helpers\ArrayHelper;
-use yii\helpers\VarDumper;
 
 class GoogleCoder extends CoderAbstract
 {

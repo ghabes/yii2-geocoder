@@ -1,9 +1,9 @@
 <?php
 
-namespace deka6pb\geocoder;
+namespace ghabes\geocoder;
 
-use deka6pb\geocoder\coders\GoogleCoder;
-use deka6pb\geocoder\coders\YandexCoder;
+use ghabes\geocoder\coders\GoogleCoder;
+use ghabes\geocoder\coders\YandexCoder;
 use yii\base\Exception;
 
 class Geocoder
