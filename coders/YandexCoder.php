@@ -10,7 +10,7 @@ use yii\helpers\VarDumper;
 
 class YandexCoder extends CoderAbstract
 {
-    protected static function execute($query, array $params = [])
+    protected function execute($query, array $params = [])
     {
         $curl = new Curl();
 

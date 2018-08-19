@@ -7,44 +7,43 @@ use deka6pb\geocoder\Point;
 abstract class CoderAbstract extends \yii\base\BaseObject implements CoderInterface
 {
     /**
-     * Максимальное кол-во попыток получить данные
+     * Maximum number of attempts to get data
      */
     const MAX_ATTEMPT = 5;
 
-    public static function findByAddress($address, array $params = [], $results = 10)
+    public $options = ['format' => 'json'];
+
+    public static function findByAddress($address, array $options = [])
     {
         if (false === is_string($address)) {
             throw new \InvalidArgumentException('Address must be a string');
         }
 
-        return static::getData($address, compact('results'));
+        return (new static)->getData($address, $options);
     }
 
-    public static function findOneByAddress($address, array $params = [])
+    public static function findOneByAddress($address, array $options = [])
     {
-        return static::findByAddress($address, $params, 1);
+        return static::findByAddress($address, array_merge(['results' => 1], $options));
     }
 
-    public static function findByPoint(Point $point, $kind, Point $radius = null, array $params = [], $results = 10)
+    public static function findByPoint(Point $point, array $options = [])
     {
-        if ($radius) {
-            $params['spn'] = $radius->toString();
-        }
 
-        return static::getData($point->toString(), array_merge(compact('kind', 'results'), $params));
+        return (new static)->getData($point->toString(), $options);
     }
 
-    public static function findByOnePoint(Point $point, $kind, Point $radius = null, array $params = [])
+    public static function findByOnePoint(Point $point, array $options = [])
     {
-        return static::findByPoint($point, $kind, $radius, $params, 1);
+        return static::findByPoint($point, array_merge(['results' => 1], $options));
     }
 
-    private static function getData($query, array $params)
+    private function getData($query, array $options)
     {
         $objects = null;
 
         for ($i = 0; $i < self::MAX_ATTEMPT; $i++) {
-            $objects = static::execute($query, $params);
+            $objects = $this->execute($query, $options);
 
             if (!is_null($objects)) {
                 break;
@@ -54,5 +53,5 @@ abstract class CoderAbstract extends \yii\base\BaseObject implements CoderInterf
         return $objects;
     }
 
-    abstract protected static function execute($query, array $params = []);
+    abstract protected function execute($query, array $options = []);
 }
