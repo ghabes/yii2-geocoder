@@ -11,22 +11,30 @@ use deka6pb\geocoder\Point;
 interface CoderInterface
 {
     /**
+     * @param $address
+     * @param array $options
      * @return mixed
      */
-    public static function findByAddress($address, array $params = [], $results = 10);
+    public static function findByAddress($address, array $options = []);
 
     /**
+     * @param $address
+     * @param array $options
      * @return mixed
      */
-    public static function findOneByAddress($address, array $params = []);
+    public static function findOneByAddress($address, array $options = []);
 
     /**
+     * @param Point $point
+     * @param array $options
      * @return mixed
      */
-    public static function findByPoint(Point $point, $kind, Point $radius = null, array $params = [], $results = 10);
+    public static function findByPoint(Point $point, array $options = []);
 
     /**
+     * @param Point $point
+     * @param array $options
      * @return mixed
      */
-    public static function findByOnePoint(Point $point, $kind, Point $radius = null, array $params = []);
+    public static function findByOnePoint(Point $point, array $options = []);
 }
