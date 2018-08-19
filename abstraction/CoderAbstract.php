@@ -4,7 +4,7 @@ namespace deka6pb\geocoder\abstraction;
 
 use deka6pb\geocoder\Point;
 
-abstract class CoderAbstract extends \yii\base\Object implements CoderInterface
+abstract class CoderAbstract extends \yii\base\BaseObject implements CoderInterface
 {
     /**
      * Максимальное кол-во попыток получить данные
